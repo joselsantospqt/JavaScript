@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <label>
+            <input name="nome" class="js_nome">
+        </label>
+        <button class="js_adicionar">Adicionar</button>
+    </div>
+
+    <h3>pra fazer</h3>
+    
+    <ul class="js_lista">
+
+    </ul>
+</body>
+<script>
+
+    let $adicionar = document.querySelector('.js_adicionar');
+    $adicionar.addEventListener('click', (e) => {
+        let $nome = document.querySelector('.js_lista')
+        let nome = $nome.value
+
+        let $lista = document.querySelector('.js_lista')
+        let $li = document.createElement('li')
+        $li.innerHTML = nome
+        $lista.append($li)
+
+        
+    })
+</script>
+</html>
