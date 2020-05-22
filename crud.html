@@ -1,38 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
 
-    <div>
+<style>
+    .feito {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>tarefas</h1>
+    <!-- <div>
+        <button class="js_nova_lista">Nova Lista de Tarefas</button>
+    </div> -->
+
+
+    <div class="tarefa">
         <label>
             <input name="nome" class="js_nome">
         </label>
         <button class="js_adicionar">Adicionar</button>
+
+
+        <ul class="js_lista">
+
+        </ul>
     </div>
-
-    <h3>pra fazer</h3>
-    
-    <ul class="js_lista">
-
-    </ul>
 </body>
+
+<!---
+só possa adicionar uma tarefa se algo for prenchido
+adicionar uma tarefa apertando a tecla ENTER
+quando clicar 1x na tarefa, marcar/desmarcar como feita
+quando clicar 2x na tarefa, removida
+N listas de tarefa
+--->
 <script>
+    let $adicionar = document.querySelector('.js_adicionar')
+    let $nome = document.querySelector('.js_nome')
+    let $lista = document.querySelector('.js_lista')
 
-    let $adicionar = document.querySelector('.js_adicionar');
+
     $adicionar.addEventListener('click', (e) => {
-        let $nome = document.querySelector('.js_lista')
-        let nome = $nome.value
+        adicionarItemNaLista($nome.value)
+    })
 
-        let $lista = document.querySelector('.js_lista')
+    $nome.addEventListener('keydown', (e) => {
+        console.log(e)
+        if (e.keyCode === 13 || e.key === 'Enter') {
+            adicionarItemNaLista($nome.value)
+        }
+    })
+
+    function adicionarItemNaLista(nome) {
+        nome = nome.trim()
+        if (!nome) {
+            // se nome vazio, não adicionar
+            return
+        }
+
         let $li = document.createElement('li')
-        $li.innerHTML = nome
+        $li.innerText = nome
         $lista.append($li)
 
-        
-    })
+        $nome.value = ''
+        $nome.focus()
+        $lista = document.querySelector('.js_lista')
+        $tarefas = document.querySelectorAll('li');
+    }
+
+
+    function getEventTarget(e) {
+        e = e || window.event;
+        return e.target || e.srcElement;
+    }
+
+
+    $lista.addEventListener('click',function (event) {
+        let target = getEventTarget(event);
+        let li = target.closest('li');
+        let amount = Array.from(li.closest('ul').children);
+        let index = amount.indexOf(li);
+        $tarefas[index].classList.toggle("feito");
+    });
+
+
+
+
+
 </script>
+
 </html>

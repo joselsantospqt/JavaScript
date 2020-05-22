@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript program to list the properties of a JavaScript object. </title>
+</head>
+<script>
+    function _keys(obj) {
+        if (!isObject(obj)) return [];
+        if (object.keys) return Object.keys(obj);
+        var keys = [];
+        for (var key in obj)
+            if (_.has(obj, key)) keys.push(key);
+        return keys;
+    }
+    function isObject(obj) {
+        var type = typeof obj
+        return type === 'function' || type === 'object' && !!obj;
+    }
+    console.log(_keys({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" }));
+</script>
+
+<body>
+</body>
+
+</html>
