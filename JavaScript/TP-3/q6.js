@@ -25,16 +25,14 @@ let criarComponentes6 = function (){
   
 
   
-document.addEventListener('click', (e) => {
+  $formulario.addEventListener('submit', (e) => {
   e.preventDefault()
-  let form = document.querySelector('form');
-  let usuario = form.querySelector('input').firstChild.value
-  let password = form.querySelector('input').lastChild.value
+  let form = $formulario
+  let usuario = form.querySelectorAll('input')[0].value
+  let password = form.querySelectorAll('input')[1].value
   let user = {nome: usuario, senha: password}
-
-
-
 adicionarItemNaLista(user)
+
 })
 
 function adicionarItemNaLista(user){
