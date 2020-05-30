@@ -7,6 +7,7 @@ let criarComponentes6 = function (){
   let $ul = document.createElement('ul')
   let $content = document.createElement('div')
   let $span = document.createElement('span')
+  let $h1 = document.createElement('h1')
   let $li
   let $links
   let $lista
@@ -15,7 +16,8 @@ let criarComponentes6 = function (){
   let OBJ = []
   let paginas = {}
   $content.setAttribute("Class", 'js-conteudo');
-  $q.append($ul,$content)
+  $h1.innerText = 'Algoritmo 06'
+  $q.append($h1, $ul,$content)
   $content = document.querySelector('.js-conteudo')
   $lista = document.querySelector('ul')
 
@@ -78,8 +80,14 @@ let criarComponentes6 = function (){
     let form = $formulario
     let usuario = form.querySelectorAll('input')[0].value
     let password = form.querySelectorAll('input')[1].value
-    let user = {nome: usuario, senha: password}
-    setStorageUser(user)
+
+      if(!usuario.trim() || !password.trim()){
+        window.alert("Preencha os Campos !")
+      }
+      else{
+        let user = {nome: usuario, senha: password}
+        setStorageUser(user)
+      }
     })
   }
 
@@ -107,8 +115,14 @@ let criarComponentes6 = function (){
     let form = $formulario
     let usuario = form.querySelectorAll('input')[0].value
     let password = form.querySelectorAll('input')[1].value
-    let user = {nome: usuario, senha: password}
-    getStorageUser(user)
+
+    if(!usuario.trim() || !password.trim()){
+      window.alert("Preencha os Campos !")
+    }
+    else{
+      let user = {nome: usuario, senha: password}
+      getStorageUser(user)
+    }
     })
   }
 
@@ -159,7 +173,7 @@ let autenticado = false;
   }
 
   if(!autenticado){
-    window.alert("Usuário não encontrado");
+    window.alert("Os dados não conferem");
   }else{
     navegacao('logado')
   }

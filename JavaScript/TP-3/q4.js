@@ -37,11 +37,16 @@ let criarComponentes4 = function (){
   $formulario.addEventListener('submit', (e) => {
   e.preventDefault()
   let form = $formulario
-  let A = parseInt(form.querySelectorAll('input')[0].value)
-  let B = parseInt(form.querySelectorAll('input')[1].value)
-  let C = parseInt(form.querySelectorAll('input')[2].value)
+  let A = form.querySelectorAll('input')[0].value
+  let B = form.querySelectorAll('input')[1].value
+  let C = form.querySelectorAll('input')[2].value
 
-  $span.innerText = calcular(A,B,C);
+  if(!A.trim() || !B.trim() || !C.trim()){
+    window.alert("Preencha os Campos !")
+  }
+  else{
+    $span.innerText = calcular(parseInt(A), parseInt(B), parseInt(c));
+  }
   })
 
   function calcular(quantidade,minimo,maximo) {

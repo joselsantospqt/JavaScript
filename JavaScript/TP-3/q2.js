@@ -2,7 +2,7 @@
 
 
 let criarComponentes2 = function (){
-  let $q = document.querySelector('#q4')
+  let $q = document.querySelector('#q2')
   let $form = document.createElement('form')
   let $h1 = document.createElement('h1')
   let $span = document.createElement('span')
@@ -35,9 +35,14 @@ let criarComponentes2 = function (){
   $formulario.addEventListener('submit', (e) => {
   e.preventDefault()
   let form = $formulario
-  let fatorial = parseInt(form.querySelectorAll('input')[0].value)
+  let fatorial = form.querySelectorAll('input')[0].value
+  if(!fatorial.trim()){
+    window.alert("Preencha os Campos !")
+  }
+  else{
+    $span.innerText = calcular(parseInt(fatorial));
+  }
 
-  $span.innerText = calcular(fatorial);
   })
 
   function calcular(fatorial) {

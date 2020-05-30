@@ -32,8 +32,12 @@ let criarComponentes5 = function (){
   let A = form.querySelectorAll('input')[0].value
   let B = form.querySelectorAll('input')[1].value
   let C = form.querySelectorAll('input')[2].value
-
-  $span.innerText = tipoTriangulo(A, B, C);
+  if(!A.trim() || !B.trim() || !C.trim()){
+    window.alert("Preencha os Campos !")
+  }
+  else{
+    $span.innerText = tipoTriangulo(parseInt(A), parseInt(B), parseInt(c));
+  }
   })
 
   function tipoTriangulo(a, b, c) {
