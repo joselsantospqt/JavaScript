@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página Home basica em HTML">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="keywords" content="html desenvolvimento web front-end">
+    <title>Página home - TP1</title>
+    <!-- FOLHA DE ESTILO DA PÁGINA -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/normalise-tag.css">
+</head>
+
+<body class="homepage">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+        <div class="container">
+            <div id="header">
+                <div id="logo">
+                    <a alt="Botão voltar para a página principal" href="index.html">
+                    <img alt="Logo do Site - Kombi Café" src="/images/logo_kombi_coffee.png" />
+                    </a>
+                </div>
+                <nav alt="menu navegação" id="nav">
+                    <ul>
+                        <li><a alt="Página Principal" href="index.html">Home</a></li>
+                        <li><a alt="Localização" href="#">Local</a></li>
+                        <li><a alt="Cardápio" href="# ">Cardápio</a></li>
+                        <li><a alt="Eventos" href="#">Eventos</a></li>
+                        <li><a alt="Contatos" href="#">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page conteúdo -->
+    <div id="wrapper" class="container">
+        <!-- Banner -->
+        <div id="banner" class="row">
+            <div class="col-12">
+                <section>
+                    <h1 alt="Título banner" class="text-banner">O café que chega até você</h1>
+                    <a href="#"><img alt="Imagem de grãos de café" src="images/banner.jpg" alt=""></a>
+                </section>
+            </div>
+        </div>
+        <div id="page" class="row">
+            <div class="col-6 ml-2">
+                <h1 alt="Título conteúdo" class="bold">Escolha seu café</h1>
+                <p alt="Paragráfo">Hoje em dia, Café bom não é só aquele feito nocoador de pano que nossas avós faziam, um novo mundo se abre  para nós em matéria de tipos de grãos, procedência, tipos de torras e jeitos de preparar a bebida, que é tão popular na mesa dos brasileiros.</p>
+            </div>
+            <div class="col-12 ml-2">
+                <hr/>
+                <h1 alt="Título conteúdo" class="bold">Aonde encontrar a loja</h1>
+                <p alt="Paragráfo" >O Kombi coffe é movel. Veja aonde você pode encontrar a Loja:</p>
+                <!-- MAPA DE LOCALIZAÇÃO -->
+                <iframe alt="Mapa Localização" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1971491058566!2d-43.17913368440208!3d-22.906098043606566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5fd24e0bdd%3A0x99447fc2607f1de1!2sInstituto%20Infnet!5e0!3m2!1spt-BR!2sbr!4v1588570094223!5m2!1spt-BR!2sbr" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <div class="container">
+            <p alt="Rodapé">Design: José Ricardo Lima dos Santos Pereira -   <a alt="Link instituição" href="http://infnet.edu.br/">INFNET</a></p>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>

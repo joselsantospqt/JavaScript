@@ -36,7 +36,7 @@ let criarComponentes5 = function (){
     window.alert("Preencha os Campos !")
   }
   else{
-    $span.innerText = tipoTriangulo(parseInt(A), parseInt(B), parseInt(c));
+    $span.innerText = tipoTriangulo(parseInt(A), parseInt(B), parseInt(C));
   }
   })
 

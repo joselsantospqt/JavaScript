@@ -1,0 +1,192 @@
+
+/* PADRONIZAÇÃO DAS CORES REFERENCIA */
+.cor1{
+    cor:#8A5922;
+}
+.cor2{
+    cor:#806546;
+}
+.cor3{
+    cor:#CCA170;
+}
+.cor4{
+    cor:#FFC98C;
+}
+.cor5{
+    cor:#FFEDD9;
+}
+
+
+/* Container */
+
+body {
+    margin: 0em;
+	padding: 0em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 9.5pt;
+    color: #4e4e4e;
+    background: #FFEDD9;
+    min-width: 1200px;
+}
+
+h1, h2, h3 {
+	padding: 0 0 1em 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #353535;
+}
+
+h2
+{
+	letter-spacing: -1px;
+	font-size: 2.00em;
+}
+
+p, ol, ul
+{
+	margin-top: 1em;
+}
+
+p
+{
+	line-height: 1.75em;
+}
+
+a
+{
+	text-decoration: underline;
+
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+hr{
+    border-color: #b3b3b3;
+    border-width: 0.01em;
+}
+
+
+/* Header */
+
+#header
+{
+    position: relative;
+    padding: 2em;
+}
+
+#logo {
+    position: absolute;
+    top: -4em;
+    left: 0;
+}
+
+#nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#nav ul {
+    text-align: center;
+}
+
+
+#nav li {
+    display: inline-block;
+}
+
+#nav a {
+    display: block;
+    float: left;
+    height: 6em;
+    padding: 2.00em 1.5em 0em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 1.30em;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+#nav a:hover{
+    text-shadow: 2px 2px black;
+}
+
+/* Header Wrapper */
+
+#header-wrapper
+{
+    overflow: hidden;
+    margin-bottom: 3em;
+    padding: 5em 0em 3.5em 0em;
+    background: #806546;
+    box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,.30);
+}
+
+#wrapper
+{
+    overflow: hidden;
+    padding: 0em 0em 3em 0em;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .05);
+}
+
+
+/* Banner */
+
+ 
+#banner a img
+{
+    display: block;
+    width: 100%;
+}
+
+/* Page */
+
+#page
+{
+    overflow: hidden;
+    padding: 5em 0em 0em 0em;
+}
+
+.homepage #page
+{
+    padding: 3em 0em 0em 0em;
+}
+
+.text-banner{
+    position: absolute;
+    font-size: 4rem;
+    color: white;
+    padding-left: 2em;
+    text-shadow: 3px 1px #210903;
+}
+
+/* Copyright */
+
+#copyright
+{
+    overflow: hidden;
+    padding: 3em 0em 6em 0em;
+    background: url(images/img02.jpg) repeat-x left top;
+    text-shadow: 1px 1px 0px #FFFFFF;
+    text-align: center;
+    font-size: 1em;
+    color: #949494;
+}
+
+#copyright a
+{
+    color: #949494;
+}
+
+#copyright a:hover
+{
+    text-decoration: none;
+}
