@@ -5,7 +5,9 @@ let criarComponentes3 = function (){
   let $table = document.createElement('table')
   let $h1 = document.createElement('h1')
   let $span = document.createElement('span')
-  let $button = document.createElement('button')
+  let $input = document.createElement('input')
+  let $thead = document.createElement('thead')
+  let $tbody = document.createElement('tbody')
   let $br = document.createElement('br')
   let arrayMenu = ['#', 'ALUNO', 'NOTA', 'SITUAÇÃO']
   let $tr
@@ -16,7 +18,6 @@ let criarComponentes3 = function (){
   let situacao
   let relatorio = []
   let notas = {}
-  let count = 0;
   let aprovados
   let reprovados
 
@@ -24,30 +25,23 @@ let criarComponentes3 = function (){
   $h1.innerText = 'Algoritmo 03'
   $q.append($h1, $span, $br, $table)
 
-  $button.setAttribute("type", "input");
-  $button.setAttribute("class", "js-adicionar");
-  $button.innerText = 'Calcular';
-  $span.append($button)
+  $input.setAttribute("type", "button");
+  $input.setAttribute("class", "js-adicionar");
+  $input.value = 'Calcular';
+  $span.append($input)
 
-  $table = document.querySelector('.js-tabela');
-  let $thead = document.createElement('thead')
-  let $tbody = document.createElement('tbody')
   $table.append($thead, $tbody)
 
-  $thead = document.querySelector('.js-tabela > thead');
   $tr = document.createElement('tr')
   $thead.append($tr)
 
-  $tr = document.querySelector('.js-tabela > thead > tr ');
   
   for(let item of arrayMenu){
     $th = document.createElement('th')
     $th.setAttribute("scope", "col");
     $tr.append($th)
-    $th = document.querySelectorAll('th')[count]
     $th.innerText = item;
 
-    count++
     }
 
     function limpar($item){
@@ -57,15 +51,13 @@ let criarComponentes3 = function (){
       return $item
     }
 
-    let $adicionar = document.querySelector('.js-adicionar')
-    $table = document.querySelector('.js-tabela > tbody')
 
-    $adicionar.addEventListener('click', (e) => {
+    $input.addEventListener('click', (e) => {
       e.preventDefault()
       
       aprovados = 0
       reprovados = 0
-      limpar($table)
+      limpar($tbody)
 
       function aluno(aluno, nota, situacao) {
         this.aluno = aluno;
@@ -103,7 +95,7 @@ let criarComponentes3 = function (){
       notas[ns] = nota
       relatorio.push(new aluno(i, ns, situacao))
 
-      $table_row = $table.insertRow(-1)
+      $table_row = $tbody.insertRow(-1)
       $nr_celula = $table_row.insertCell(-1)
       $nr_celula.innerText = i
       $celula = $table_row.insertCell(-1)
@@ -114,7 +106,7 @@ let criarComponentes3 = function (){
       $celula.innerText = relatorio[i].getSituacao()
     }
 
-    $table_row = $table.insertRow(-1)
+    $table_row = $tbody.insertRow(-1)
     $nr_celula = $table_row.insertCell(-1)
     $nr_celula.innerText = "RESULTADOS: "
     $celula = $table_row.insertCell(-1)

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página Home basica em HTML">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="keywords" content="html desenvolvimento web front-end">
+    <title>Página Contato - TP1</title>
+    <!-- FOLHA DE ESTILO DA PÁGINA -->
+     
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalise-tag.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="homepage">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+        <div class="container">
+            <div class="row" id="logo">
+                <div class="col-12">
+                    <a alt="Botão voltar para a página principal" href="index.html">
+                        <img alt="Logo do Site - Kombi Café" src="images/logo_kombi_coffee.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="row" id="header">
+                <div class="col-12">
+                    <nav alt="menu navegação" id="nav">
+                        <ul>
+                            <li><a alt="Página Principal" href="index.html">Home</a></li>
+                            <li><a alt="Localização" href="local.html">Local</a></li>
+                            <li><a alt="Cardápio" href="cardapio.html">Cardápio</a></li>
+                            <li><a alt="Eventos" href="eventos.html">Eventos</a></li>
+                            <li><a alt="Contatos" href="contato.html">Contatos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page conteúdo -->
+    <div id="wrapper" class="container">
+        <!-- Banner -->
+        <div id="banner" class="row">
+            <div class="col-12">
+                <section>
+                    <h1 alt="Título banner" class="text-top-banner">O <span class="bold">café</span> que chega até você
+                    </h1>
+                </section>
+            </div>
+            <div class="col-12">
+                <section>
+                    <p alt="Título banner" class="text-banner">Cafés super selecionados e com muito mais sabor</p>
+                    <a href="#"><img alt="Imagem de grãos de café" src="images/banner.jpg" alt=""></a>
+                </section>
+            </div>
+        </div>
+
+        <div id="page" class="row">
+            <div class="col-6 ml-2">
+                <main>
+                    <section id="contato">
+                        <h1 alt="Título conteúdo" class="bold">Contatos: </h1>
+                        <form class="validation" novalidate>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" required>
+                                    <div class="invalid-feedback">
+                                        <p>Preencha o campo !</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="sobrenome">Sobrenome</label>
+                                    <input type="text" class="form-control" id="sobrenome" required>
+                                    <div class="invalid-feedback">
+                                        <p>Preencha o campo !</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text" class="form-control" id="telefone" required>
+                                    <div class="invalid-feedback">
+                                        <p>Preencha o campo !</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="celular">celular</label>
+                                    <input type="text" class="form-control" id="celular" required>
+                                    <div class="invalid-feedback">
+                                        <p>Preencha o campo !</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="mensagem">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        <p>Preencha o campo !</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary js-button" type="submit">Enviar</button>
+                        </form>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyrigh">
+        <div class="container">
+            <p alt="Rodapé">Design: José Ricardo Lima dos Santos Pereira - <a alt="Link instituição"
+                    href="http://infnet.edu.br/">INFNET</a></p>
+        </div>
+    </div>
+    <script src="js.js"></script>
+
+
+</body>
+
+</html>

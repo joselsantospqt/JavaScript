@@ -60,24 +60,23 @@ let criarComponentes6 = function (){
     let $form = document.createElement('form')
     let $h1 = document.createElement('h1')
     $h1.innerText = 'Página de Cadastro'
-    $form.setAttribute("id", "form");
+    $form.setAttribute("id", "form6");
     $el.append($h1, $form)
     
-    let $formulario = document.querySelector('#form')
-    let $button = document.createElement('input')
+    let $input = document.createElement('input')
     let $nome = document.createElement('input')
     let $senha = document.createElement('input');
     $nome.setAttribute("type", "text");
     $nome.setAttribute("placeholder", "Digite um Nome");
     $senha.setAttribute("type", "number");
     $senha.setAttribute("placeholder", "Digite uma Senha");
-    $button.setAttribute("type", "submit");
-    $button.value = 'Cadastrar';
-    $formulario.append($nome, $senha, $button)
+    $input.setAttribute("type", "submit");
+    $input.value = 'Cadastrar';
+    $form.append($nome, $senha, $input)
 
-    $formulario.addEventListener('submit', (e) => {
+    $form.addEventListener('submit', (e) => {
     e.preventDefault()
-    let form = $formulario
+    let form = $form
     let usuario = form.querySelectorAll('input')[0].value
     let password = form.querySelectorAll('input')[1].value
 
@@ -95,24 +94,23 @@ let criarComponentes6 = function (){
     let $form = document.createElement('form')
     let $h1 = document.createElement('h1')
     $h1.innerText = 'Página de Login'
-    $form.setAttribute("id", "form");
+    $form.setAttribute("id", "form6");
     $el.append($h1, $form)
     
-    let $formulario = document.querySelector('#form')
-    let $button = document.createElement('input')
+    let $input = document.createElement('input')
     let $nome = document.createElement('input')
     let $senha = document.createElement('input');
     $nome.setAttribute("type", "text");
     $nome.setAttribute("placeholder", "Digite seu Nome");
     $senha.setAttribute("type", "number");
     $senha.setAttribute("placeholder", "Digite sua Senha");
-    $button.setAttribute("type", "submit");
-    $button.value = 'Logar';
-    $formulario.append($nome, $senha, $button)
+    $input.setAttribute("type", "submit");
+    $input.value = 'Logar';
+    $form.append($nome, $senha, $input)
 
-    $formulario.addEventListener('submit', (e) => {
+    $form.addEventListener('submit', (e) => {
     e.preventDefault()
-    let form = $formulario
+    let form = $form
     let usuario = form.querySelectorAll('input')[0].value
     let password = form.querySelectorAll('input')[1].value
 
@@ -127,16 +125,16 @@ let criarComponentes6 = function (){
   }
 
   paginas['logado'] = function ($el) {
-    let $h1 = document.createElement('h3')
-    let $button = document.createElement('input')
+    let $h1 = document.createElement('h1')
+    let $input = document.createElement('input')
     $h1.innerText = 'Logado com sucesso'
-    $button.setAttribute("type", "button");
-    $button.setAttribute("class", "js-deslogar");
-    $button.value = 'Deslogar';
-    $el.append($h1, $button)
+    $input.setAttribute("type", "button");
+    $input.setAttribute("class", "js-deslogar");
+    $input.value = 'Deslogar';
+    $el.append($h1, $input)
 
-    $button = document.querySelector('.js-deslogar')
-    $button.addEventListener('click', (e) => {
+    $input = document.querySelector('.js-deslogar')
+    $input.addEventListener('click', (e) => {
       e.preventDefault()
       navegacao('login')
       })

@@ -7,9 +7,8 @@
     <meta name="description" content="Página Home basica em HTML">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="keywords" content="html desenvolvimento web front-end">
-    <title>Página home - TP1</title>
+    <title>Página Cardápio - TP1</title>
     <!-- FOLHA DE ESTILO DA PÁGINA -->
-   
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="normalise-tag.css">
@@ -63,16 +62,48 @@
         </div>
 
         <div id="page" class="row">
-            <div class="col-6 ml-2">
-                <h1 alt="Título conteúdo" class="bold">Escolha seu café</h1>
-                <p alt="Paragráfo">Hoje em dia, Café bom não é só aquele feito nocoador de pano que nossas avós faziam,
-                    um novo mundo se abre para nós em matéria de tipos de grãos, procedência, tipos de torras e jeitos
-                    de preparar a bebida, que é tão popular na mesa dos brasileiros.</p>
-            </div>
-            <div class="col-6 ml-2">
-                <hr />
-                <h1 alt="Título conteúdo" class="bold">Aonde encontrar a loja</h1>
-                <p alt="Paragráfo">O Kombi coffe é movel. Veja aonde você pode encontrar a Loja:</p>
+            <div class="col-10 ml-2">
+                <main>
+                    <section id="cardapio">
+                        <p alt="Título conteúdo" class="bold pb-3">Nossos Cafés: </p>
+                        <h1 alt="Título conteúdo" class="bold">Cardápio</h1>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Descrição</th>
+                                    <th>Preço</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img alt="Imagem de grãos de café" src="images/cafe-quente.jpg" alt=""></td>
+                                    <td>Importamos grãos diretamente de indonésia</td>
+                                    <td>R$5,00</td>
+                                </tr>
+                                <tr>
+
+                                    <td><img alt="Imagem de grãos de café" src="images/cafe-gelado.jpg" alt=""></td>
+                                    <td>Nosso Frappuccino é famoso até na Itália!</td>
+                                    <td>R$10,00</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Imagem de grãos de café" src="images/cafe-alcoolico.jpg" alt=""></td>
+                                    <td>Aproveite para se aquecer no inverno com nossos deliciosos cafés</td>
+                                    <td>R$10,00</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Imagem de grãos de café" src="images/chocolate.jpg" alt=""></td>
+                                    <td>Mesmo que sua preferência não seja café, nós temos algo para você</td>
+                                    <td>R$6,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
+                <div>
+                    <p>Nossos Cafés sempre produzidos com graus orgânicos.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -84,7 +115,8 @@
                     href="http://infnet.edu.br/">INFNET</a></p>
         </div>
     </div>
-   
+    
+
 </body>
 
 </html>

@@ -6,32 +6,30 @@ let criarComponentes5 = function (){
   let $form = document.createElement('form')
   let $h1 = document.createElement('h1')
   let $span = document.createElement('span')
-  let $button
+  let $input
   let array = ['A', 'B', 'C']
   $h1.innerText = 'Algoritmo 05'
-  $form.setAttribute("id", "form");
+  $form.setAttribute("id", "form5");
   $q.append($h1, $form, $span)
   
-  let $formulario = document.querySelector('#form')
-
   for(let item of array){
-  $button = document.createElement('input')
-  $button.setAttribute("type", "number");
-  $button.setAttribute("placeholder", "Campo " + item);
-  $formulario.append($button)
+  $input = document.createElement('input')
+  $input.setAttribute("type", "number");
+  $input.setAttribute("placeholder", "Campo " + item);
+  $form.append($input)
   }
 
-  $button = document.createElement('input')
-  $button.setAttribute("type", "submit");
-  $button.value = 'Calcular';
-  $formulario.append($button)
+  $input = document.createElement('input')
+  $input.setAttribute("type", "submit");
+  $input.value = 'Calcular';
+  $form.append($input)
   
-  $formulario.addEventListener('submit', (e) => {
+  $form.addEventListener('submit', (e) => {
   e.preventDefault()
-  let form = $formulario
-  let A = form.querySelectorAll('input')[0].value
-  let B = form.querySelectorAll('input')[1].value
-  let C = form.querySelectorAll('input')[2].value
+  let buttons = $form.querySelectorAll('input')
+  let A = buttons[0].value
+  let B = buttons[1].value
+  let C = buttons[2].value
   if(!A.trim() || !B.trim() || !C.trim()){
     window.alert("Preencha os Campos !")
   }
