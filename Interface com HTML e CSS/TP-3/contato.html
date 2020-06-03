@@ -52,61 +52,49 @@
                         </h1>
                     </div>
                     <div class="col-12">
-                        <section>
-                            <p alt="Título banner" class="text-banner">Cafés super selecionados e com muito mais sabor
-                            </p>
-                            <a href="#"><img alt="Imagem de grãos de café" src="images/banner.jpg" alt=""></a>
-                        </section>
+                        <p alt="Título banner" class="text-banner">Cafés super selecionados e com muito mais sabor
+                        </p>
+                        <a href="#"><img alt="Imagem de grãos de café" src="images/banner.jpg" alt=""></a>
                     </div>
             </section>
 
             <section id="contato">
+                <hr />
                 <h1 alt="Título conteúdo" class="bold">Contatos: </h1>
-                <form class="validation" novalidate>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="nome" required>
-                            <div class="invalid-feedback">
-                                <p>Preencha o campo !</p>
+                <div class="d-flex">
+                    <form class="validation" novalidate>
+                        <div class="form-group">
+                            <div class="col-6">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" class="form-control" id="nome" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" name="sobrenome" class="form-control" id="sobrenome" required>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="sobrenome">Sobrenome</label>
-                            <input type="text" class="form-control" id="sobrenome" required>
-                            <div class="invalid-feedback">
-                                <p>Preencha o campo !</p>
+                        <div class="form-group">
+                            <div class="col-6">
+                                <label for="telefone">Telefone</label>
+                                <input type="number" name="telefone" class="form-control" id="telefone" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="celular">celular</label>
+                                <input type="number" name="celular" class="form-control" id="celular" required>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="telefone" required>
-                            <div class="invalid-feedback">
-                                <p>Preencha o campo !</p>
+                        <div class="form-group">
+                            <div class="col-12">
+                                <label for="mensagem">Mensagem</label>
+                                <br />
+                                <textarea type="text" class="form-control" name="mensagem" id="mensagem" rows="5"
+                                    required></textarea>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="celular">celular</label>
-                            <input type="text" class="form-control" id="celular" required>
-                            <div class="invalid-feedback">
-                                <p>Preencha o campo !</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-                            <div class="invalid-feedback">
-                                <p>Preencha o campo !</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <button class="btn btn-primary js-button" type="submit">Enviar</button>
-                </form>
+                        <button class="btn btn-primary js-button" type="submit">Enviar</button>
+                    </form>
+                </div>
             </section>
         </main>
         <!-- Copyright -->

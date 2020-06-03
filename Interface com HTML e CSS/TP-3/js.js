@@ -3,23 +3,24 @@ let $inputs = $form.querySelectorAll('input')
 let $textarea = $form.querySelector('textarea')
 let $button = $form.querySelector('.js-button')
 
-$button.addEventListener('click', (e)=>{
+$button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    for(let input of $inputs){
+    for (let input of $inputs) {
         let inputValue = input.value
+        let inputName = input.name
         let texteValue = $textarea.value
-        if(inputValue.trim()){
-            input.classList.remove('is-invalid')
-            if(texteValue.trim()){
-                $textarea.classList.remove('is-invalid')
-                window.alert('MENSAGEM ENVIADA !');  
-                break;  
-            }else{
-                $textarea.classList.add('is-invalid')
+        if (inputValue.trim()) {
+            if (texteValue.trim()) {
+                window.alert('MENSAGEM ENVIADA !');
+                break;
+            } else {
+                inputName = $textarea.name
+                window.alert('Preencha os campos: ' + `${inputName}`);
+                break;
             }
-        }else{
-            input.classList.add('is-invalid')
+        } else {
+            window.alert('Preencha os campos: ' + `${inputName}`);
         }
     }
 
