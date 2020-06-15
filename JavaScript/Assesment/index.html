@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment - José Ricardo Lima dos Santos Pereira</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <main class="py-5">
+        <section class="col-12 justify-content-center" style="position: absolute; display: inline-grid;">
+
+            <form class="js_form">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="number" class="form-control js_quantidade" name="quantidade">
+                    </div>
+                    <div class="col">
+                        <label for="moeda">moeda</label>
+                        <select class="form-control js_combo_moedas" name="moeda">
+                            <option>Seleciona a Moeda</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="data">Data</label>
+                        <input type="date" class="form-control" name="data">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2 my-3">Consultar</button>
+
+
+                <table class="table js-resultado col">
+                    <thead>
+                        <tr>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Moeda</th>
+                            <th scope="col">Data da Compra</th>
+                            <th scope="col">Valor na compra</th>
+                            <th scope="col">% Hoje</th>
+                            <th scope="col">Valor de hoje</th>
+                            <th scope="col">REMOVER</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </form>
+            <p class="js_teste"></p>
+            <span class="js_msg"></span>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="../Assesment/script.js"></script>
+
+</body>
+
+</html>
