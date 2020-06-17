@@ -31,8 +31,8 @@
         <section class="col-12">
 
             <form class="js_form needs-validation justify-content-center">
-                <div class="form-row ">
-                    <div class="col-sm-12 col-lg-4">
+                <div class="form-row pb-3">
+                    <div class="col-sm-12 col-lg-3">
                         <label for="quantidade">Quantidade</label>
                         <input type="number" class="form-control js_quantidade" name="quantidade">
 
@@ -40,7 +40,7 @@
                             Invalido !
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-4">
+                    <div class="col-sm-12 col-lg-3">
                         <label for="moeda">moeda</label>
                         <select class="form-control js_combo_moedas" name="moeda" placeholder="Seleciona a Moeda">
                             <option value="" disabled selected>Select your option</option>
@@ -50,15 +50,15 @@
                             Invalido !
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-4">
+                    <div class="col-sm-12 col-lg-3">
                         <label for="data">Data</label>
                         <input type="date" class="form-control js_dateTime" name="data">
                         <div class="invalid-feedback">
                             Invalido !
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-primary js_submit col-sm-12 col-md-3" style="margin-top: 2rem;">Consultar</button>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2 my-3 js_submit">Consultar</button>
                 <div class="row">
                     <table class="table table-responsive table-bordered js-resultado " style="border: none">
                         <thead>
@@ -82,7 +82,20 @@
                 <button type="button"
                     class="btn btn-warning mb-2 my-3 d-none js_limpar col-sm-12 col-md-3">Limpar</button>
                 <br />
+                <div class="row col-12 p-3 justify-content-center" style="background-color: gray;">
+                    <h2>Relatório das moedas que eu possuo</h2>
+                </div>
+                <br />
                 <div class="row col-12 relatorio">
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="row col-12 p-3 justify-content-center" style="background-color: gray;">
+                    <h2>Somatório das minhas riquezas hoje em Reais</h2>
+                </div>
+                <br />
+                <div class="row col-12 riquezas">
                 </div>
             </div>
         </section>

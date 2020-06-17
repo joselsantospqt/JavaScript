@@ -1,9 +1,9 @@
 let $form = document.querySelector('.js_form');
 let $select = document.querySelector('.js_combo_moedas');
 let $input = document.querySelector('.js_quantidade');
+let $date_select = document.querySelector('.js_dateTime');
 let $table = $form.querySelector('.table');
 let $tbody = $table.querySelector('tbody');
-let $date_select = document.querySelector('.js_dateTime');
 let $input_limpar = document.querySelector('.js_limpar');
 let $div_relatorio = document.querySelector('.relatorio');
 let date_now = new Date().toString();
@@ -51,7 +51,7 @@ $form.addEventListener('submit', (e) => {
             }
         }
     }
-})
+});
 
 $input_limpar.addEventListener('click', (e) => {
     e.preventDefault();
@@ -64,7 +64,6 @@ $input_limpar.addEventListener('click', (e) => {
     }
     $input_limpar.classList.add('d-none');
 });
-
 
 async function filtrar() {
     let apiDataSelecionado;
@@ -171,6 +170,10 @@ async function getMoedas() {
 
 }
 
+function getPromiseExchangeRatesAPI(url) {
+    return fetch(url);
+}
+
 function carregaComboMoeda() {
 
     for (let key of coin) {
@@ -198,10 +201,6 @@ function carregaHistoricoTabela() {
         }
         $input_limpar.classList.remove('d-none');
     }
-}
-
-function getPromiseExchangeRatesAPI(url) {
-    return fetch(url);
 }
 
 function formatDateAPI(date) {
