@@ -9,51 +9,82 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+    <style>
+        @media screen and (max-width: 1440px) {
+            .table-responsive {
+                display: table;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .table-responsive {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <main class="py-5">
-        <section class="col-12 justify-content-center" style="position: absolute; display: inline-grid;">
+    <main class="py-5 container">
+        <section class="col-12">
 
-            <form class="js_form">
-                <div class="form-row">
-                    <div class="col">
+            <form class="js_form needs-validation justify-content-center">
+                <div class="form-row ">
+                    <div class="col-sm-12 col-lg-4">
                         <label for="quantidade">Quantidade</label>
                         <input type="number" class="form-control js_quantidade" name="quantidade">
+
+                        <div class="invalid-feedback">
+                            Invalido !
+                        </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-12 col-lg-4">
                         <label for="moeda">moeda</label>
-                        <select class="form-control js_combo_moedas" name="moeda">
-                            <option>Seleciona a Moeda</option>
+                        <select class="form-control js_combo_moedas" name="moeda" placeholder="Seleciona a Moeda">
+                            <option value="" disabled selected>Select your option</option>
                         </select>
+
+                        <div class="invalid-feedback">
+                            Invalido !
+                        </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-12 col-lg-4">
                         <label for="data">Data</label>
-                        <input type="date" class="form-control" name="data">
+                        <input type="date" class="form-control js_dateTime" name="data">
+                        <div class="invalid-feedback">
+                            Invalido !
+                        </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2 my-3">Consultar</button>
+                <button type="submit" class="btn btn-primary mb-2 my-3 js_submit">Consultar</button>
+                <div class="row">
+                    <table class="table table-responsive table-bordered js-resultado " style="border: none">
+                        <thead>
+                            <tr>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Moeda</th>
+                                <th scope="col">Data da Compra</th>
+                                <th scope="col">Valor na compra</th>
+                                <th scope="col">% Hoje</th>
+                                <th scope="col">Valor de hoje</th>
+                                <th scope="col">REMOVER</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-
-                <table class="table js-resultado col">
-                    <thead>
-                        <tr>
-                            <th scope="col">Quantidade</th>
-                            <th scope="col">Moeda</th>
-                            <th scope="col">Data da Compra</th>
-                            <th scope="col">Valor na compra</th>
-                            <th scope="col">% Hoje</th>
-                            <th scope="col">Valor de hoje</th>
-                            <th scope="col">REMOVER</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </form>
-            <p class="js_teste"></p>
-            <span class="js_msg"></span>
+            <div class="row d-flex justify-content-center">
+                <button type="button"
+                    class="btn btn-warning mb-2 my-3 d-none js_limpar col-sm-12 col-md-3">Limpar</button>
+                <br />
+                <div class="row col-12 relatorio">
+                </div>
+            </div>
         </section>
     </main>
 
