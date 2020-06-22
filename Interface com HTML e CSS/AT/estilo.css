@@ -1,0 +1,221 @@
+div #container {
+    margin: 0 auto;
+    width: 940px;
+}
+
+header h1 a {
+    width: 134px;
+    height: 130px;
+    display: block;
+    text-indent: ‐9999px;
+    background-image: url("./img/logo_GK.png");
+    margin-left: 40px;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+figure {
+    background-color: #F2EDED;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 30px;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 15px;
+    padding: 0 45px;
+    line-height: 1.5em;
+}
+
+figure #centro‐distribuicao {
+    width: 550px;
+}
+
+figure #familia‐teles {
+    float: right;
+    margin: 0 10px 10px 0;
+}
+
+#diferenciais ul {
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: #ccc;
+    margin: 0 10px 0 10px;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url("./img/fundo-rodape.png");
+    clear: both;
+}
+
+
+
+footer .caixa-footer {
+    position: relative;
+    padding: 20px;
+    /* display: inline-flex; */
+}
+footer img {
+    display: inline;
+}
+
+footer p {
+    display: inline;
+    position: relative;
+    bottom: 22px;
+}
+
+
+.social {
+    list-style: none;
+    display: inline-flex;
+    float: right;
+    padding-top: 20px;
+}
+
+.social a {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    text-indent: -9999px;
+}
+
+.social a[href*="https://www.facebook.com/gkfashion"] {
+    background-image: url("./img/sociais.png");
+}
+
+.social a[href*="https://twitter.com/gkfashion"] {
+    background-image: url("./img/sociais.png");
+    background-position-x: -36%;
+}
+
+.social a[href*="https://plus.google.com/gkfashion"] {
+    background-image: url("./img/sociais.png");
+    background-position-x: -86%;
+}
+
+
+header {
+    position: relative;
+}
+
+.sacola {
+    background-image: url("./img/sacola.png");
+    background-repeat: no-repeat;
+    text-align: right;
+    width: 140px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-principal {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-principal ul {
+    display: inline-flex;
+}
+
+.menu-principal ul {
+    list-style: none;
+}
+
+.menu-principal ul li {
+    padding: 10px;
+}
+
+.menu-principal ul li a {
+    color: green;
+}
+
+.busca,
+.menu-departamentos {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 10px;
+    width: 230px;
+    float: left;
+}
+
+.menu-departamentos {
+    clear: both;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.titulo-departamentos,
+.titulo-busca,
+.form-busca {
+    margin: 10px;
+}
+
+.busca input[type*="search"] {
+    width: 170px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.destaque {
+    margin-top: 10px;
+}
+
+.menu-departamentos li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.menu-departamentos a {
+    color: #585858;
+}
+
+
+.menu-departamentos li ul {
+    display: none;
+}
+
+.menu-departamentos li:hover ul {
+    display: block;
+}
+
+.menu-departamentos ul ul {
+    background-color: white;
+}
+
+.menu-departamentos ul ul li{
+    background-color: #e2e2e2;
+}
+
+
+.menu-departamentos li li a:before {
+    content: '\27B3';
+    padding-right: 3px;
+}
