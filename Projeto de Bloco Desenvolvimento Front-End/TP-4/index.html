@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css"
     <!‐‐[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]‐‐>
@@ -25,9 +26,10 @@
                 <ul>
                     <li><a href="#" alt="Site interno." title="Sua Conta">Sua Conta</a></li>
                     <li><a href="#" alt="Site interno." title="Lista de Desejos">Lista de Desejos</a></li>
-                    <li><a href="cartao_fidelidade.html" alt="Site interno." title="Cartão Fidelidade">Cartão Fidelidade</a></li>
-                    <li><a href="sobre.html" alt="Site interno." title="Sobre">Sobre</a></li>
-                    <li><a href="contato.html" alt="Site interno." title="Contato">Contato</a></li>
+                    <li><a href="#" alt="Site interno." title="Treatro">Treatro</a></li>
+                    <li><a href="#" alt="Site interno." title="Filmes">Filmes</a></li>
+                    <li><a href="#" alt="Site interno." title="Shows">Shows</a></li>
+                    <li><a href="#" alt="Site interno." title="Palestras">Palestras</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,32 +41,86 @@
                     <img src="./img/busca.png" alt="imagem busca" title="icone busca">
                 </section>
                 <section class="menu-departamentos">
-                    <h2 class="titulo-departamentos">Departamentos</h2>
+                    <h2 class="titulo-departamentos">Categorias</h2>
                     <nav>
                         <ul>
                             <li>
-                               <a href="#" class="BlusasECamisas" alt="Item de menu" title="Blusas e Camisas">Blusas e Camisas</a>
+                               <a href="#" alt="Item de menu" title="Filmes">Filmes</a>
                                <ul>
-                                <li><a href="#" alt="Sub de menu" title="Manga curta">Manga curta</a></li>
-                                <li><a href="#"  alt="Sub de menu" title="Manga comprida">Manga comprida</a></li>
-                                <li><a href="#"  alt="Sub de menu" title="Camisa social">Camisa social</a></li>
-                                <li><a href="#"  alt="Sub de menu" title="sCamisa casual">Camisa casual</a></li>
+                                <li><a href="#" alt="Sub de menu" title="Ação">Ação</a></li>
+                                <li><a href="#"  alt="Sub de menu" title="Aventura">Aventura</a></li>
+                                <li><a href="#"  alt="Sub de menu" title="Terror">Terror </a></li>
+                                <li><a href="#"  alt="Sub de menu" title="Suspense">Suspense </a></li>
+                                <li><a href="#"  alt="Sub de menu" title="Religioso">Religioso </a></li>
                             </ul>
                             </li>
-                            <li><a href="#" alt="Item de menu" title="Calças">Calças</a></li>
-                            <li><a href="#" alt="Item de menu" title="Saias">Saias</a></li>
-                            <li><a href="#" alt="Item de menu" title="Vestidos">Vestidos</a></li>
-                            <li><a href="#" alt="Item de menu" title="Sapatos">Sapatos</a></li>
-                            <li><a href="#" alt="Item de menu" title="Bolsas e Carteiras">Bolsas e Carteiras</a></li>
-                            <li><a href="#" alt="Item de menu" title="Acessórios">Acessórios</a></li>
+ 
+                            <li><a href="#" alt="Item de menu" title="Treatro">Treatro</a></li>
+                            <li><a href="#" alt="Item de menu" title="Shows">Shows</a></li>
+                            <li><a href="#" alt="Item de menu" title="Palestras">Palestras</a></li>
+                            <li><a href="#" alt="Item de menu" title="Sugestões">Sugestões</a></li>
                         </ul>
                     </nav>
                 </section>
-                <img src="./img/destaque-home.png" alt="imagem home" class="img-destaque" title="destaque home" aria-labelledby="home-label">
+                <div class="img-destaque">
+                    <div class="carousel">
+                      <ul class="slides">
+                        <input type="radio" name="radio-buttons" id="img-1" checked />
+                        <li class="slide-container">
+                          <div class="slide-image">
+                            <img src="./img/banner/img1.jpg">
+                          </div>
+                          <div class="carousel-controls">
+                            <label for="img-3" class="prev-slide">
+                              <span>&lsaquo;</span>
+                            </label>
+                            <label for="img-2" class="next-slide">
+                              <span>&rsaquo;</span>
+                            </label>
+                          </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-2" />
+                        <li class="slide-container">
+                          <div class="slide-image">
+                            <img src="./img/banner/img2.jpg">
+                          </div>
+                          <div class="carousel-controls">
+                            <label for="img-1" class="prev-slide">
+                              <span>&lsaquo;</span>
+                            </label>
+                            <label for="img-3" class="next-slide">
+                              <span>&rsaquo;</span>
+                            </label>
+                          </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-3" />
+                        <li class="slide-container">
+                          <div class="slide-image">
+                            <img src="./img/banner/img3.jpg">
+                          </div>
+                          <div class="carousel-controls">
+                            <label for="img-2" class="prev-slide">
+                              <span>&lsaquo;</span>
+                            </label>
+                            <label for="img-1" class="next-slide">
+                              <span>&rsaquo;</span>
+                            </label>
+                          </div>
+                        </li>
+                        <div class="carousel-dots">
+                          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                        </div>
+                      </ul>
+                    </div>
+            </div>
+
+                <!-- <img src="./img/destaque-home.png" alt="imagem home" class="img-destaque" title="destaque home" aria-labelledby="home-label"> -->
                 <p id="home-label">Imagem de uma Modelo Slider</p>
                 <div class="caixa paineis">
                     <section class="painel novidades">
-                        <h2>Novidades</h2>
+                        <h2>Lançamento</h2>
                         <ol>
                             <li><a href="#">
                                 <figure >
@@ -106,52 +162,50 @@
                                 <img src="./img/miniaturas/miniatura6.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
-                            </figure></a></li>
-
-                            
+                            </figure></a></li>                            
                         </ol>
                     </section>
                     <section class="painel mais-vendidos">
-                        <h2>Mais Vendidos</h2>
+                        <h2>Em Cartaz</h2>
                         <ol>
                             <li><a href="#">
                                 <figure >
-                                <img src="./img/miniaturas/miniatura7.png" alt="fotografia"
+                                <img src="./img/miniaturas/miniatura.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
                             </figure></a></li>
 
                             <li><a href="#">
                                 <figure >
-                                <img src="./img/miniaturas/miniatura8.png" alt="fotografia"
+                                <img src="./img/miniaturas/miniatura.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
                             </figure></a></li>
 
                             <li><a href="#">
                                 <figure >
-                                <img src="./img/miniaturas/miniatura9.png" alt="fotografia"
+                                <img src="./img/miniaturas/miniatura.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
                             </figure></a></li>
 
                             <li><a href="#">
                                 <figure >
-                                <img src="./img/miniaturas/miniatura10.png" alt="fotografia"
+                                <img src="./img/miniaturas/miniatura.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
                             </figure></a></li>
 
                             <li><a href="#">
                                 <figure >
-                                <img src="./img/miniaturas/miniatura11.png" alt="fotografia"
+                                <img src="./img/miniaturas/miniatura.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
                             </figure></a></li>
 
                             <li><a href="#">
                                 <figure >
-                                <img src="./img/miniaturas/miniatura12.png" alt="fotografia"
+                                <img src="./img/miniaturas/miniatura.png" alt="fotografia"
                                     title="Legenda">
                                 <figcaption>Legenda</figcaption>
                             </figure></a></li>
@@ -164,12 +218,12 @@
 
         <footer>
             <div class="caixa-footer">
-                <img src="./img/logo_rodape.png" alt="logo_rodapé" title="logo rodapé Gk Fashion">
-                <p>&copy; Copyright GK Fashion</p>
+                <img src="./img/logo_rodape.png" alt="logo_rodapé" title="logo rodapé">
+                <p>&copy; Copyright Design end Develope José Ricardo.</p>
                 <ul class="social">
-                    <li><a href="https://www.facebook.com/gkfashion">Facebook</a></li>
-                    <li><a href="https://twitter.com/gkfashion">Twitter</a></li>
-                    <li><a href="https://plus.google.com/gkfashion">Google+</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://plus.google.com/">Google+</a></li>
                 </ul>
             </div>
         </footer>

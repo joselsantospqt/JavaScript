@@ -8,12 +8,12 @@ div #container {
 }
 
 header h1 a {
-    width: 132px;
-    height: 135px;
+    width: 19.2em;
+    height: 2.9em;
     display: block;
     text-indent: ‐9999px;
     background-image: url("./img/logo_GK.png");
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 h2 {
@@ -34,6 +34,7 @@ figure {
 figure img {
     display: block;
     margin: 0 auto;
+    width: 9em;
 }
 
 figcaption {
@@ -89,6 +90,8 @@ footer .caixa-footer {
 
 footer img {
     display: inline;
+    width: 3em;
+    height: 3em;
 }
 
 footer p {
@@ -133,7 +136,7 @@ footer p {
 
 header {
     position: relative;
-    margin-bottom: 10px;
+    margin: 2em 0;
 }
 
 .sacola {
@@ -147,9 +150,9 @@ header {
 }
 
 .menu-principal {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    /* top: 25%; */
+    padding-top: 1em;
 }
 
 .menu-principal ul {
