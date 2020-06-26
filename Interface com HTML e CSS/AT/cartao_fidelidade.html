@@ -7,7 +7,7 @@
     <meta name="description" content="Página Home basica em HTML">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="keywords" content="html desenvolvimento web front-end">
-    <title>Págian Contato</title>
+    <title>Págian Cartão Fidelidade</title>
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
@@ -18,7 +18,6 @@
 
 <body>
     <div class="container">
-
         <header>
             <h1><a alt="imagem logo" title="logo GK Fashion" href="index.html"></a></h1>
             <p class="sacola">Nenhum item na sacola de compras</p>
@@ -64,54 +63,61 @@
                 </section>
                 <img src="./img/destaque-home.png" alt="imagem home" title="destaque home" class="img-destaque" aria-labelledby="home-label">
                 <p id="home-label">Imagem de uma Modelo Slider</p>
-                <section id="contato">
-                    <h2>Contatos</h2>
-                    <form class="validation" novalidate>
-                        <div class="form-group">
-                            <div>
-                                <label for="nome">Nome</label>
-                                <input type="text" name="nome"  id="nome" required="required" pattern="[a-z\s]+$" />
-                            </div>
-                        </div>
-                            <div class="form-group">
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="email" name="email"  id="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label for="motivo">Motivo</label>
-                                <select name="motivo" id="motivo" required="required">
-                                    <option disabled selected value> -- Selecione uma opção-- </option>
-                                    <option value="1">Sugestão</option>
-                                    <option value="2">Crítica</option>
-                                    <option value="3">Elogio</option>
-                                    <option value="4">Outros</option>
-                                  </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label for="comentario">Comentários</label>
-                                <br />
-                                <textarea type="text"  name="comentario" id="comentario" rows="5"
-                                    required="required" pattern="[a-z\s]+$"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        <button data-message="Enviar sua Mensagem" class="btn btn-primary js-button" type="submit">Enviar</button>
-                        </div>
+            <section id="tabela-fidelidade">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ADESÃO</td>
+                            <td>Todos os titulares do Cartão Fidelidade GK Fashion, de crêdito e de convênio, estão automaticamente participando do programa;</td>
+                        </tr>
+                        <tr>
+                            <td>PONTOS</td>
+                            <td>Cada R$10,00 em compras correspondem a 01 ponto e reservam 04 pontos (400%) na forma de bônus, sendo necessário uma compra a cada 60 dias para não perder os pontos;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BÔNUS</td>
+                            <td>Para validar os bônus ganhos será necessário uma nova compra no mês subsequente. Caso não realize uma nova compra, os bônus serão cancelados;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                PRÉMIOS</td>
+                            <td>Os pontos poderão ser trocados por produtos online na GK Fashion e visualizados na página de Catálogo de Prémios;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PRAZO DE TROCA</td>
+                            <td>O titular poderá realizar a troca dos pontos por produtos a qualquer momento, desde que atinjam a quantidade mínima de pontos que dá direito a algum dos prémios. Os pontos poderão ser acumulados por até 24 meses;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>FORMA DE CONSULTA</td>
+                            <td>Os pontos poderão ser consultados no extrato do cartão enviado mensalmente ao titular ou na página Consulte seu Cartão;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>INADIMPLÊNCIA</td>
+                            <td>
+                                Em caso de inadimplência, os pontos acumulados permanecerão disponíveis até a regularização dos débitos.
+                                  </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+            </section>
 
-                    </form>
-                </section>
-            </div>
- 
         </main>
 
         <footer>
             <div class="caixa-footer">
-                <img src="./img/logo_rodape.png" alt="logo_rodapé" alt="logo_rodapé" title="logo rodapé Gk Fashion">
+                <img src="./img/logo_rodape.png" alt="logo_rodapé" alt="logo_rodapé" alt="logo_rodapé" title="logo rodapé Gk Fashion">
                 <p>&copy; Copyright GK Fashion</p>
                 <ul class="social">
                     <li><a href="https://www.facebook.com/gkfashion">Facebook</a></li>
@@ -121,28 +127,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        let $form = document.querySelector('.validation');
-        let $button = $form.querySelector('.js-button')
-
-        $button.addEventListener('click', (e) => {
-
-            let $nome = $form.querySelector('#nome').value;
-            let $email = $form.querySelector('#email').value;
-            let $select = $form.querySelector('select').value;
-            let $textarea = $form.querySelector('textarea').value;
-            e.preventDefault();
-
-            if (!$nome.trim() && !$email.trim() && !$select.trim() && !$textarea.trim()) {
-                window.alert('Preencha os campos !!');
-            } else {
-                window.alert('Mensagem Enviada');
-            }
-
-
-        })
-    </script>
 </body>
 
 </html>

@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Language" content="pt-br">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página Home basica em HTML">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="keywords" content="html desenvolvimento web front-end">
     <title>Págian Sobre</title>
 
     <link rel="stylesheet" href="reset.css">
@@ -16,13 +18,50 @@
 
 <body>
     <div class="container">
-
         <header>
-
-
+            <h1><a alt="imagem logo" title="logo GK Fashion" href="index.html"></a></h1>
+            <p class="sacola">Nenhum item na sacola de compras</p>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#" alt="Site interno." title="Sua Conta">Sua Conta</a></li>
+                    <li><a href="#" alt="Site interno." title="Lista de Desejos">Lista de Desejos</a></li>
+                    <li><a href="cartao_fidelidade.html" alt="Site interno." title="Cartão Fidelidade">Cartão Fidelidade</a></li>
+                    <li><a href="sobre.html" alt="Site interno." title="Sobre">Sobre</a></li>
+                    <li><a href="contato.html" alt="Site interno." title="Contato">Contato</a></li>
+                </ul>
+            </nav>
         </header>
         <main role="main">
-
+            <div class="caixa-destaque">
+                <section class="busca">
+                    <h2 class="titulo-busca">Busca</h2>
+                    <input class="form-busca" type="search">
+                    <img src="./img/busca.png" alt="imagem busca" title="icone busca">
+                </section>
+                <section class="menu-departamentos">
+                    <h2 class="titulo-departamentos">Departamentos</h2>
+                    <nav>
+                        <ul>
+                            <li>
+                               <a href="#" class="BlusasECamisas" alt="Item de menu" title="Blusas e Camisas">Blusas e Camisas</a>
+                               <ul>
+                                <li><a href="#" alt="Sub de menu" title="Manga curta">Manga curta</a></li>
+                                <li><a href="#"  alt="Sub de menu" title="Manga comprida">Manga comprida</a></li>
+                                <li><a href="#"  alt="Sub de menu" title="Camisa social">Camisa social</a></li>
+                                <li><a href="#"  alt="Sub de menu" title="sCamisa casual">Camisa casual</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="#" alt="Item de menu" title="Calças">Calças</a></li>
+                            <li><a href="#" alt="Item de menu" title="Saias">Saias</a></li>
+                            <li><a href="#" alt="Item de menu" title="Vestidos">Vestidos</a></li>
+                            <li><a href="#" alt="Item de menu" title="Sapatos">Sapatos</a></li>
+                            <li><a href="#" alt="Item de menu" title="Bolsas e Carteiras">Bolsas e Carteiras</a></li>
+                            <li><a href="#" alt="Item de menu" title="Acessórios">Acessórios</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <img src="./img/destaque-home.png" alt="imagem home" title="destaque home" class="img-destaque" aria-labelledby="home-label">
+                <p id="home-label">Imagem de uma Modelo Slider</p>
             <section id="sobre">
                 <h2 id="titulo_sobre"> A GK Fashion</h2>
 
@@ -106,7 +145,7 @@
 
         <footer>
             <div class="caixa-footer">
-                <img src="./img/logo_rodape.png" alt="logo_rodapé">
+                <img src="./img/logo_rodape.png" alt="logo_rodapé" alt="logo_rodapé" alt="logo_rodapé" title="logo rodapé Gk Fashion">
                 <p>&copy; Copyright GK Fashion</p>
                 <ul class="social">
                     <li><a href="https://www.facebook.com/gkfashion">Facebook</a></li>
